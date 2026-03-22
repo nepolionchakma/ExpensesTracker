@@ -1,29 +1,17 @@
-// navigation/BottomTabs.tsx
-
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Text, View} from 'react-native';
 import {Home, Menu} from 'lucide-react-native';
+import HomeScreen from '../modules/Home/Home';
+import ProfileScreen from '../modules/ProfileScreen/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
-
-const Screen1 = () => (
-  <View>
-    <Text style={{color: 'black'}}>Home Tab</Text>
-  </View>
-);
-const Screen2 = () => (
-  <View>
-    <Text style={{color: 'black'}}>Profile Tab</Text>
-  </View>
-);
 
 export default function BottomTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen
         name="HomeTab"
-        component={Screen1}
+        component={HomeScreen}
         options={{
           title: 'Home',
           headerShown: false,
@@ -40,7 +28,7 @@ export default function BottomTabs() {
       />
       <Tab.Screen
         name="ProfileTab"
-        component={Screen2}
+        component={ProfileScreen}
         options={{
           title: 'Profile',
           headerShown: false,
