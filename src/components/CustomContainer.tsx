@@ -254,7 +254,7 @@ const CustomContainer: React.FC<ContainerNewProps> = ({
 const styles = StyleSheet.create({
   safeareaview: {
     flex: 1,
-    padding: 5,
+    // padding: 5,
   },
   scrollview: {
     flex: 1,

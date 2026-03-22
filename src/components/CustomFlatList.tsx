@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import {ActivityIndicator, FlatList, StyleSheet} from 'react-native';
-import {COLORS} from '../constant/Themes';
+import {COLORS} from '../constants/Themes/AppTheme';
 
 interface Props {
   key?: any;
@@ -13,6 +13,7 @@ interface Props {
   horizontal?: boolean;
   numColumns?: number;
   showHorizontalScrollIndicator?: boolean;
+  showVerticalScrollIndicator?: boolean;
   headerComponent?: any;
   emptyItem?: any;
   isStickyHeader?: boolean;
@@ -31,6 +32,7 @@ const CustomFlatList: React.FC<Props> = ({
   horizontal,
   numColumns,
   showHorizontalScrollIndicator,
+  showVerticalScrollIndicator,
   headerComponent,
   emptyItem,
   isStickyHeader = false,
@@ -58,7 +60,7 @@ const CustomFlatList: React.FC<Props> = ({
   return (
     <FlatList
       key={key}
-      showsVerticalScrollIndicator={false}
+      showsVerticalScrollIndicator={showVerticalScrollIndicator}
       horizontal={horizontal}
       showsHorizontalScrollIndicator={showHorizontalScrollIndicator}
       contentContainerStyle={[

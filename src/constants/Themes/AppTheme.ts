@@ -14,21 +14,17 @@ export const SIZES = {
 export const COLORS = {
   primary: '#009CDE',
   darkBG: '#121E44',
-  lightBG: '#F2F2F7',
-
   darkOnBG: '#FFFFFF',
-  lightOnBG: '#000000',
-
   darkTitle: '#FFFFFF',
-  lightTitle: '#000000',
-
   secondaryDarkButton: '#2E90FA',
-  secondaryLightButton: '#2E90FA',
-
   darkSurface: '#1C1C1E',
-  lightSurface: '#F2F2F7',
-
   darkAmber: '#FFC014',
+
+  lightBG: '#ffffff',
+  lightOnBG: '#f0f2f3',
+  lightTitle: '#242d35',
+  secondaryLightButton: '#1c4bf9',
+  lightSurface: '#F2F2F7',
   lightAmber: '#FFC014',
 
   // colors
