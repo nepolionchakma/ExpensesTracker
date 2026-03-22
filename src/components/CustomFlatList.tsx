@@ -20,6 +20,9 @@ interface Props {
   hasMore?: number;
   refreshing?: boolean;
   onRefresh?: any;
+  onScroll?: any;
+  scrollEventThrottle?: number;
+  pagingEnabled?: boolean;
 }
 const CustomFlatList: React.FC<Props> = ({
   data = [],
@@ -39,6 +42,9 @@ const CustomFlatList: React.FC<Props> = ({
   hasMore,
   refreshing,
   onRefresh,
+  onScroll,
+  scrollEventThrottle,
+  pagingEnabled,
 }: Props) => {
   const renderMoreDataLoader = () => {
     return (
@@ -86,6 +92,9 @@ const CustomFlatList: React.FC<Props> = ({
       ListEmptyComponent={emptyItem}
       refreshing={refreshing}
       onRefresh={onRefresh}
+      onScroll={onScroll}
+      scrollEventThrottle={scrollEventThrottle}
+      pagingEnabled={pagingEnabled}
     />
   );
 };
